@@ -14,7 +14,7 @@ def parse_log(log_file):
                print(f"Timestamp: {entry['timestamp']}, IP: {entry['ip']}, Message: {entry['message']}")
            else:
                print(f"Unrecognized line format: {line.strip()}")
-
+# Generate report
 def generate_report(log_file):
     api_re=re.compile(r'^(?P<method>GET|POST|PUT|DELETE) (?P<path>/\S+) (?P<status>\d{3}) (?P<duration>[\d\.]+)µs')
     id_re=re.compile(r'\[(\d{4}[A-Z0-9]+)\]')
